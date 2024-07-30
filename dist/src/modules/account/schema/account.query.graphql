@@ -1,7 +1,0 @@
-type Query {
-    getUserInfo: UserInfo @isAuthenticated
-    getAccount(accountId: String, externalCall: Boolean): AccountOwnerName @isAuthenticated
-    getWhiteLists: Whitelist @isService
-    getUnconfirmedBalance: UnconfirmedBalanceInfo @isAuthenticated
-    getRecentReceivers: SuggestedReceivers @isAuthenticated
-}

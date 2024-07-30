@@ -1,1 +1,0 @@
-{"version":3,"file":"build.js","sourceRoot":"","sources":["../../../src/typegen/build.ts"],"names":[],"mappings":";;AAAA,iCAAwC;AAExC,IAAM,aAAa,GAAG;IACpB,OAAO,EAAE,gBAAgB;IACzB,OAAO,EAAE,qBAAqB;IAC9B,MAAM,EAAE,0BAA0B;IAClC,WAAW,EAAE,+BAA+B;IAC5C,IAAI,EAAE,YAAY;IAClB,KAAK,EAAE,KAAK;CACb,CAAC;AAEF,kDAAkD;AAClD,qBAAa,CAAC,aAAa,CAAC,CAAC"}

@@ -1,7 +1,0 @@
-type Mutation {
-    registerTelegramUser(firstName: String, lastName: String, telegramId: String): RegisterUser @isService
-    updateUser(nickName: String, language: LANGUAGE): UpdateUser @isAuthenticated
-    sendVerificationSms(phoneNumber: String): OperationStatus @isAuthenticated
-    verifyActivationCode(code: String): OperationStatus @isAuthenticated
-    toggleNotify(notify: Boolean): OperationStatus @isAuthenticated
-}

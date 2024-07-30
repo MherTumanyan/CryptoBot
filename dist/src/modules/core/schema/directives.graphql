@@ -1,3 +1,0 @@
-directive @isAuthenticated on FIELD_DEFINITION
-directive @isAdmin on FIELD_DEFINITION
-directive @isService on FIELD_DEFINITION
