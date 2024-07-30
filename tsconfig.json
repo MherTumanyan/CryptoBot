@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "baseUrl": ".",
+		"outDir": "./dist",
+		"esModuleInterop": true,
+		"downlevelIteration": true,
+		"target": "es5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "pretty": true,
+    "typeRoots": ["node_modules/@types"], // ** custom ones should go here "src/@types"
+    "paths": {
+      "@spot_wallet/utils": ["src/utils"],
+      "@spot_wallet/*": ["src/modules/*"],
+      "@spot_wallet/types": ["src/modules/core/types"],
+      "@customTypes/types": ["src/@types/"],
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

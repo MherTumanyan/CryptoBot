@@ -1,0 +1,165 @@
+enum NetworkRulesEnum {
+    IN
+    OUT
+}
+
+enum LANGUAGE {
+    EN
+    RU
+    AM
+}
+
+enum CoinType {
+    BTC
+    DASH
+    ETH
+    USDT
+}
+
+enum CurrencyType {
+    USD
+    RUB
+    AMD
+}
+
+enum IncomingTransactionMethod {
+    PAYMENT
+    EASY_TRANSFER
+    INTERNAL_PAYMENT
+}
+
+enum OutgoingTransactionMethod {
+    WITHDRAW
+    EASY_TRANSFER
+    INTERNAL_WITHDRAW
+    WITHDRAW_BUY_BTC_FOR_FRIEND
+    EASY_TRANSFER_BUY_BTC_FOR_YOURSELF
+    EASY_TRANSFER_BUY_BTC_FOR_FRIEND
+}
+
+enum TransactionMethod {
+    WITHDRAW
+    EASY_TRANSFER
+    INTERNAL_WITHDRAW
+    PAYMENT
+    INTERNAL_PAYMENT
+    WITHDRAW_BUY_BTC_FOR_FRIEND
+    EASY_TRANSFER_BUY_BTC_FOR_YOURSELF
+    EASY_TRANSFER_BUY_BTC_FOR_FRIEND
+    CASHBACK
+}
+
+enum TransactionStatus {
+    PENDING
+    INPROGRESS
+    RESOLVED
+    CONFIRMED
+    COMPLETED
+    CANCELED
+    FAILED
+    EXPIRED
+    SYSTEM_CANCELED
+    SENT
+}
+
+enum ReceivingAddressStatus {
+    ACTIVE
+    EXPIRED
+}
+
+enum WalletType {
+    ELECTRUM
+}
+
+enum UserRole {
+    ADMIN
+    USER
+}
+
+enum AcceptationStatus {
+    PENDING
+    EXPIRED
+    SELLER_SELECTED
+    BUYER_SELECTED
+    BUYER_PAYED
+    INCOMPLETE_PAYMENT
+    DONE
+    BLOCKED
+    BUYER_CANCELED
+    SYSTEM_CANCELED
+    SELECTED
+}
+
+enum PAYMENTMETHOD {
+    TELCELL
+    EASYPAY
+    IDRAM
+}
+
+type Rates {
+    USD: Float
+    RUB: Float
+    AMD: Float
+}
+
+type ExchangeRates {
+    USDToUSDTExchangeRate: Float,
+    BTCToDASHExchangeRate: Float,
+    BTCToETHExchangeRate: Float,
+    USDToDASHExchangeRate: Float,
+    RUBToUSDTExchangeRate: Float,
+    RUBToAMDExchangeRate: Float,
+    RUBToUSDExchangeRate: Float,
+    USDToETHExchangeRate: Float,
+    RUBToBTCExchangeRate: Float,
+    USDToAMDExchangeRate: Float,
+    BTCToRUBExchangeRate: Float,
+    RUBToETHExchangeRate: Float,
+    USDToBTCExchangeRate: Float,
+    BTCToAMDExchangeRate: Float,
+    BTCToUSDTExchangeRate: Float,
+    BTCToUSDExchangeRate: Float,
+    RUBToDASHExchangeRate: Float,
+    USDToRUBExchangeRate: Float,
+    DASHToUSDExchangeRate: Float,
+    ETHToRUBExchangeRate: Float,
+    DASHToBTCExchangeRate: Float,
+    ETHToBTCExchangeRate: Float,
+    DASHToRUBExchangeRate: Float,
+    ETHToAMDExchangeRate: Float,
+    ETHToUSDExchangeRate: Float,
+    USDTToDASHExchangeRate: Float,
+    ETHToDASHExchangeRate: Float,
+    USDTToETHExchangeRate: Float,
+    DASHToETHExchangeRate: Float,
+    ETHToUSDTExchangeRate: Float,
+    USDTToRUBExchangeRate: Float,
+    USDTToUSDExchangeRate: Float,
+    DASHToAMDExchangeRate: Float,
+    USDTToAMDExchangeRate: Float,
+    USDTToBTCExchangeRate: Float,
+    DASHToUSDTExchangeRate: Float,
+    AMDToBTCExchangeRate: Float,
+    AMDToUSDExchangeRate: Float,
+    AMDToUSDTExchangeRate: Float,
+    AMDToRUBExchangeRate: Float,
+    AMDToDASHExchangeRate: Float,
+    AMDToETHExchangeRate: Float,
+}
+
+
+enum AddressPurpose {
+    SELLER_PAYMENT
+    EXTERNAL_PAYMENT
+}
+
+enum HistoryTransactionType {
+    IN
+    OUT
+    BUY_BTC_OFFER
+}
+
+enum ElectrumWalletType {
+    IN
+    OUT
+}

@@ -1,0 +1,5 @@
+type Query {
+    getTechnicalDetails: Technical @isAdmin
+    sendNotifications(message: String!, telegramIds: [String]): OperationStatus @isAdmin
+    dailyReport: OperationStatus @isService
+}

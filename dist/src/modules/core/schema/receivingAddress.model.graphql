@@ -1,0 +1,8 @@
+type ReceivingAddress @namespace(value: "master") @collection(value: "receivingAddresses") @mongo(timestamps: true) {
+    userId: String!
+    address: String!
+    coinType: String!
+    providerType: String @default(value: "COINBASE")
+    status: String @default(value: "ACTIVE")
+    addressHistory: [String]
+}

@@ -1,0 +1,7 @@
+type Mutation {
+    checkEasyTransferStatus: OperationStatus @isService
+    checkOutgoingTransactionStatus: OperationStatus @isService
+    checkReceiveCoinTransactions: OperationStatus @isService
+    setCurrencyExchangeRates: OperationStatus @isService
+    updateCurrencyExchangeRates: OperationStatus @isService
+}

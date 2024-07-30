@@ -1,0 +1,7 @@
+type Whitelist @namespace(value: "master") @collection(value: "whitelists") @mongo(timestamps: true) {
+    whitelists: Whitelists
+}
+
+type Whitelists {
+    whitelistForDev: [String]
+}

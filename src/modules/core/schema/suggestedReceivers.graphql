@@ -1,0 +1,12 @@
+type SuggestedReceivers @namespace(value: "master") @collection(value: "suggestedReceivers") @mongo(timestamps: true) {
+    ownerId: String
+    internal: [String] @default(value: [])
+    external: ExternalAddress
+}
+
+type ExternalAddress {
+    BTC: [String] @default(value: [])
+    USDT: [String] @default(value: [])
+    ETH: [String] @default(value: [])
+    DASH: [String] @default(value: [])
+}

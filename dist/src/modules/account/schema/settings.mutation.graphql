@@ -1,0 +1,3 @@
+type Mutation {
+    changeGeneralSettings(language: LANGUAGE, currency: CurrencyType): OperationStatus @isAuthenticated
+}

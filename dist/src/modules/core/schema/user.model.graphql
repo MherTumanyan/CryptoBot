@@ -1,0 +1,25 @@
+type User @namespace(value: "master") @collection(value: "users") @mongo(timestamps: true) {
+    uuid: String @unique @uuid
+    telegramId: String!
+    accountId: String!
+    firstName: String
+    lastName: String
+    nickName: String 
+    language: LANGUAGE @default(value: "EN")
+    balance: UserBalance
+    lastInteraction: Date
+    role: UserRole @default(value: "USER")
+    phoneNumber: String
+    verified: Boolean @default(value: "false")
+    verificationCode: String
+    isBlocked: Boolean @default(value: "false")
+    notify: Boolean @default(value: "true")
+}
+
+type UserBalance {
+    BTC: Float! @default(value: 0.0)
+    USDT: Float! @default(value: 0.0)
+    ETH: Float! @default(value: 0.0)
+    DASH: Float! @default(value: 0.0)
+    totalUSD: Float @default(value: 0.0)
+}

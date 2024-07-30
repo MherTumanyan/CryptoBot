@@ -1,0 +1,7 @@
+type HistoryMeta @namespace(value: "master") @collection(value: "historyMeta") @mongo(timestamps: true) {
+    transactionId: String
+    transactionType: HistoryTransactionType
+    userId: String
+    transactionStatus: TransactionStatus @default(value: PENDING)
+}
+

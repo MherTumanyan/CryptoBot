@@ -1,0 +1,11 @@
+type Technical @namespace(value: "master") @collection(value: "technicals"){
+    minTransactionUSD: Float
+    maxTransactionUSD: Float
+    exchangeRates: Rates
+    fees: Fees
+    schedulerRecurrenceTimes: Recurrences
+    rates: ExchangeRates
+    suggestedReceiversCount: Float
+
+}
+

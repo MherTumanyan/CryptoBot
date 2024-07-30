@@ -1,0 +1,184 @@
+type Address {
+    address: String
+}
+type Valid @extends(value: "OperationStatus") {
+    maxError: Boolean
+    minError: Boolean
+    isNanOrInvalidBalance: Boolean  
+}
+type ValidAmount {
+    valid: Valid
+}
+
+type InternalAddress {
+    isInternal: Boolean
+}
+
+type OrderId {
+    id: String
+}
+
+type EasyTransfer {
+    amountInCoin: Float
+    amountInUSD: Float
+    amountInCurrency: Float
+    easyTransferFeeInitialPercent: Float
+    easyTransferFeeInitialUSD: Float
+    easyTransferFeeInPercent: Float
+    easyTransferFeeCoin: Float
+    easyTransferFeeInCurrency: Float
+    totalEasyTransferAmountInCoin: Float
+    totalEasyTransferAmountInCurrency: Float
+    totalEasyTransferAmountInUsd: Float
+}
+
+type Withdraw {
+    amountInCoin: Float
+    amountInUSD: Float
+    amountInCurrency: Float
+    withdrawFeeInitialPercent: Float
+    withdrawFeeInitialUSD: Float
+    withdrawFeeInPercent: Float
+    withdrawFeeCoin: Float
+    withdrawFeeInCurrency: Float
+    totalWithdrawAmountInCoin: Float
+    totalWithdrawAmountInCurrency: Float
+    totalWithdrawAmountInUsd: Float
+}
+
+type WithdrawFeeByCoin {
+    withdrawFeeInitialPercent: Float
+    withdrawFeeInitialUSD: Float
+    withdrawFeeCoinUSD: Float
+    withdrawFeeCoin: Float
+}
+
+
+type EasyTransferFeeByCoin {
+    easyTransferFeePercent: Float
+    easyTransferFeeUSD: Float
+    easyTransferFeeCoinUSD: Float,
+    easyTransferFeeCoin: Float,
+}
+
+type CurrencyValue {
+    value: Float
+}
+
+type ValidPhoneNumber @extends(value: "OperationStatus") {
+    phoneNumber: String
+}
+
+type ValidBtcValue @extends(value: "OperationStatus") {
+    value: String
+}
+
+input Offer {
+    btcAmount: String
+}
+
+type TransferResponse @extends(value: "OperationStatus") {
+    isInternalWithdraw: Boolean
+    orderId: String
+}
+
+type WithdrawFee {
+    id: String
+    amount: Float
+    fee: Float
+}
+
+type SortedFee {
+    feeInPercent: Float
+    feeInUSD: Float
+    from: String
+    to: String
+}
+
+type HistoryResponse {
+    createdAt: Date
+    orderId: String
+    transactionType: NetworkRulesEnum
+    method: TransactionMethod
+    amount: Float
+    amountUSD: Float
+    feeUSD: Float
+    feeCoin: Float
+    sender: CredentialsHistory
+    receiver: CredentialsHistory
+    status: TransactionStatus
+    discount: Float
+    outgoingTransactionFeeInPercent: Float
+    coinType: CoinType
+}
+
+type CredentialsHistory {
+    nickName: String
+    address: String
+}
+
+type LimitedValues {
+    minTransactionValue: Float
+    maxTransactionValue: Float
+    minTransactionValueInCoin: Float
+    maxTransactionValueInCoin: Float
+}
+
+input SenderInfo {
+    accountId: String
+    nickName: String
+}
+
+input amount {
+    amount: String,
+    currency: String
+}
+
+type EasyTransferOrderResponse @extends(value: "OperationStatus") {
+    data: EasyTransferOrder
+    maxError: Boolean
+    minError: Boolean
+    isNanOrInvalidBalance: Boolean
+}
+
+type WithdrawOrderResponse @extends(value: "OperationStatus") {
+    data: WithdrawOrder
+    maxError: Boolean
+    minError: Boolean
+    isNanOrInvalidBalance: Boolean
+}
+type EasyTransferOrder {
+    currency: CurrencyType
+    coinType: CoinType
+    amountInCurrency: Float
+    amountInCoin: Float
+    easyTransferFeeCoin: Float
+    totalEasyTransferAmountInCoin: Float
+    easyTransferFeeInCurrency: Float
+    totalEasyTransferAmountInCurrency: Float
+    easyTransferFeeInPercent: Float
+    orderId: String
+    validDate: Float
+    easyTransferExpireTime: Float
+}
+
+type WithdrawOrder {
+    currency: CurrencyType
+    coinType: CoinType
+    amountInCurrency: Float
+    amountInCoin: Float
+    withdrawFeeCoin: Float
+    totalWithdrawAmountInCoin: Float
+    withdrawFeeInCurrency: Float
+    totalWithdrawAmountInCurrency: Float
+    withdrawFeeInPercent: Float
+    orderId: String
+    validDate: Float
+    withdrawExpireTime: Float
+}
+
+type EasyTransferFeePercent {
+    min: Float,
+    max: Float,
+    fee: Float
+}

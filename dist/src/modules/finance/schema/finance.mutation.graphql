@@ -1,0 +1,13 @@
+type Mutation {
+    createWithdrawOrder(amountInCurrency: Float, currency: CurrencyType, coinType: CoinType, coinAddress: String, maxAvailableBalance: Boolean): WithdrawOrderResponse @isAuthenticated
+    acceptWithdrawOrder(orderId: String): OperationStatus @isAuthenticated
+
+    createInternalWithdrawOrder(amountInCurrency: Float, currency: CurrencyType, coinType: CoinType, coinAddress: String, maxAvailableBalance: Boolean): WithdrawOrderResponse @isAuthenticated
+    acceptInternalWithdrawOrder(orderId: String): OperationStatus @isAuthenticated
+    
+    cancelWithdraw(orderId: String): OperationStatus @isAuthenticated
+    createEasyTransferOrder(amountInCurrency: Float, currency: CurrencyType, coinType: CoinType, receiverAccountId: String, maxAvailableBalance: Boolean): EasyTransferOrderResponse @isAuthenticated
+    acceptEasyTransferOrder(orderId: String): OperationStatus @isAuthenticated
+    cancelEasyTransfer(orderId: String): OperationStatus @isAuthenticated
+    receiveCoins(address:String,  total: amount, transactionId: String, hash: String): OperationStatus @isService
+}
